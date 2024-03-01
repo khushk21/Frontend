@@ -27,16 +27,19 @@ jobs:
           cache: "npm"
 
       - name: Install Dependencies
-        run: npm install
-        working-directory: Frontend/wasteless
+        run: |
+          cd wasteless
+          npm install
 
       - name: Run Tests
-        run: npm test
-        working-directory: Frontend/wasteless
+        run: |
+          cd wasteless
+          npm test
 
       - name: Build Wasteless Web Application
-        run: npm run build
-        working-directory: Frontend/wasteless
+        run: |
+          cd wasteless
+          npm run build
 
       - name: Build and Push Docker Image
         uses: mr-smithers-excellent/docker-build-push@v5
