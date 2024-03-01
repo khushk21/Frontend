@@ -25,6 +25,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
+          cache-dependency-path: Frontend/wasteless/package-lock.json
 
       - name: Install Dependencies
         run: |
