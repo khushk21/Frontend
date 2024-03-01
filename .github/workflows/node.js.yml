@@ -28,16 +28,19 @@ jobs:
 
       - name: Install Dependencies
         run: |
+          cd ..
           cd wasteless
           npm install
 
       - name: Run Tests
         run: |
+          cd ..
           cd wasteless
           npm test
 
       - name: Build Wasteless Web Application
         run: |
+          cd ..
           cd wasteless
           npm run build
 
