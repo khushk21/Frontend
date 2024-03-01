@@ -5,13 +5,12 @@ name: Frontend CICD
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -20,31 +19,32 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    
-    - name: Install Dependencies
-      run: npm install
-      working-directory: wasteless
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+        working-directory: Frontend/wasteless
 
-    - name: Run Tests
-      run: npm test
-      working-directory: wasteless
+      - name: Install Dependencies
+        run: npm install
+        working-directory: Frontend/wasteless
 
-    - name: Build Wasteless Web Application
-      run: npm run build
-      working-directory: wasteless
+      - name: Run Tests
+        run: npm test
+        working-directory: Frontend/wasteless
 
-    - name: Build and Push Docker Image
-      uses: mr-smithers-excellent/docker-build-push@v5
-      with:
-        image: nusissteam21/wasteless-frontend
-        tags: latest
-        registry: docker.io
-        dockerfile: wasteless/Dockerfile
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+      - name: Build Wasteless Web Application
+        run: npm run build
+        working-directory: Frontend/wasteless
+
+      - name: Build and Push Docker Image
+        uses: mr-smithers-excellent/docker-build-push@v5
+        with:
+          image: nusissteam21/wasteless-frontend
+          tags: latest
+          registry: docker.io
+          dockerfile: Frontend/wasteless/Dockerfile
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
