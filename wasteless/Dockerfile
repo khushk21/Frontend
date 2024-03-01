@@ -6,7 +6,7 @@ WORKDIR /wasteless
 # Copy the package.json and package-lock.json files into the container at /wasteless
 COPY wasteless/package*.json ./
 
-COPY . .
+COPY wasteless/ /wasteless/
 # Install any needed packages specified in package.json
 RUN npm install
 RUN npm run build
