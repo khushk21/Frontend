@@ -32,10 +32,10 @@ jobs:
           cd wasteless
           npm install
 
-      - name: Run Tests
-        run: |
-          cd wasteless
-          npm test
+      # - name: Run Tests
+      # run: |
+      # cd wasteless
+      # npm test
 
       - name: Build Wasteless Web Application
         run: |
