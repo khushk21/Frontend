@@ -25,23 +25,20 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
-          cache-dependency-path: Frontend/wasteless/package-lock.json
+          cache-dependency-path: wasteless/package-lock.json
 
       - name: Install Dependencies
         run: |
-          cd ..
           cd wasteless
           npm install
 
       - name: Run Tests
         run: |
-          cd ..
           cd wasteless
           npm test
 
       - name: Build Wasteless Web Application
         run: |
-          cd ..
           cd wasteless
           npm run build
 
@@ -51,6 +48,6 @@ jobs:
           image: nusissteam21/wasteless-frontend
           tags: latest
           registry: docker.io
-          dockerfile: Frontend/wasteless/Dockerfile
+          dockerfile: wasteless/Dockerfile
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
