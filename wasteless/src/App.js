@@ -5,6 +5,7 @@ import Registration from "./pages/Registration";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Catelog from "./pages/Catelog";
+import AddNewWaste from "./pages/AddNewWaste";
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
         <Route path="/users/feed" element={<Feed />} />
         <Route path="/home" element={<Home />} />
         <Route path="/catelog" element={<Catelog />} />
+        <Route path="/add/new" element={<AddNewWaste />} />
+
       </Routes>
     </Router>
   );
