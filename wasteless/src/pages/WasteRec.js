@@ -51,7 +51,7 @@ const Tabs = () => {
       <table>
         <thead>
           <tr>
-            <th onClick={() => handleTabChange('tab1')} className={activeTab === 'tab1' ? 'active' : ''}>Waste History</th>
+            {/* <th onClick={() => handleTabChange('tab1')} className={activeTab === 'tab1' ? 'active' : ''}>Waste History</th> */}
             <th> 
               <Link to="http://localhost:3000/add/new" className={activeTab === 'tab2' ? 'active' : ''}>Add Waste</Link>
             </th>
