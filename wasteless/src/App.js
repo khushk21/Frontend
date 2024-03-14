@@ -6,6 +6,8 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Catalogue from "./pages/Catalogue";
 import AddNewWaste from "./pages/AddNewWaste";
+import Information from "./pages/Information";
+import WasteRec from "./pages/WasteRec";
 
 function App() {
   return (
@@ -17,7 +19,8 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/Catalogue" element={<Catalogue />} />
         <Route path="/add/new" element={<AddNewWaste />} />
-
+        <Route path="/info" element={<Information />} />
+        <Route path="/wasterec" element={<WasteRec />} />
       </Routes>
     </Router>
   );
