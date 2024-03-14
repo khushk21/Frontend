@@ -1,7 +1,4 @@
 import React from "react";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
 import './styles/WasteRec.css'; // Import your CSS file for styling
 import { useState } from "react";
 import { useEffect } from "react";
@@ -12,9 +9,9 @@ export default function WasteRec() {
   const [activeTab, setActiveTab] = useState('tab1');
   const [tab1Content, setTab1Content] = useState([]);
 
-  const handleTabChange = (tab) => {
-    setActiveTab(tab);
-  };
+  // const handleTabChange = (tab) => {
+  //   setActiveTab(tab);
+  // };
   
   const SearchBar = () => {
     const handleInputChange = (event) => {
@@ -94,19 +91,6 @@ const Tabs = () => {
         <SearchBar />
       </div>
 
-      {/* Add content for each tab based on the activeTab state */}
-      {activeTab === 'tab1' && (
-        <div>
-          <h2></h2>
-          {/* Add content specific to Tab 1 */}
-        </div>
-      )}
-      {activeTab === 'tab2' && (
-        <div>
-          <h2></h2>
-          {/* Add content specific to Tab 2 */}
-        </div>
-      )}
     </div>
     </>
   );
