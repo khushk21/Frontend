@@ -4,7 +4,7 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 
 
-const Catelog = () => {
+const Catalogue = () => {
   return (
     <div
       className="login-container"
@@ -22,7 +22,7 @@ const Catelog = () => {
             variant="h4"
             style={{ textAlign: "center", color: "#8bc34a" }}
           >
-            This is the Catelog for Wastetastic
+            This is the Catalogue for Wastetastic
           </Typography>
         </CardContent>
       </Card>
@@ -30,4 +30,4 @@ const Catelog = () => {
   );
 };
 
-export default Catelog;
+export default Catalogue;
