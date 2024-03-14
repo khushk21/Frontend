@@ -2,16 +2,15 @@ import React from "react";
 import './styles/WasteRec.css'; // Import your CSS file for styling
 import { useState } from "react";
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
 
 export default function WasteRec() {
 
+  
   const [activeTab, setActiveTab] = useState('tab1');
-  const [tab1Content, setTab1Content] = useState([]);
 
-  // const handleTabChange = (tab) => {
-  //   setActiveTab(tab);
-  // };
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+  };
   
   const SearchBar = () => {
     const handleInputChange = (event) => {
@@ -29,7 +28,6 @@ export default function WasteRec() {
       </form>
     );
   };
-
 // Nested Tabs component within WasteRec
 const Tabs = () => {
   const [tab1Content, setTab1Content] = useState([]);
@@ -51,10 +49,8 @@ const Tabs = () => {
       <table>
         <thead>
           <tr>
-            {/* <th onClick={() => handleTabChange('tab1')} className={activeTab === 'tab1' ? 'active' : ''}>Waste History</th> */}
-            <th> 
-              <Link to="http://localhost:3000/add/new" className={activeTab === 'tab2' ? 'active' : ''}>Add Waste</Link>
-            </th>
+            <th onClick={() => handleTabChange('tab1')} className={activeTab === 'tab1' ? 'active' : ''}>Tab 1</th>
+            <th onClick={() => handleTabChange('tab2')} className={activeTab === 'tab2' ? 'active' : ''}>Tab 2</th>
             {/* Add more tab headings as needed */}
           </tr>
         </thead>
@@ -68,7 +64,6 @@ const Tabs = () => {
             ))
           )}
           {/* Add more tab content cells as needed */}
-          {activeTab === 'tab2'}
         </tbody>
       </table>
     </div>
@@ -91,6 +86,19 @@ const Tabs = () => {
         <SearchBar />
       </div>
 
+      {/* Add content for each tab based on the activeTab state */}
+      {activeTab === 'tab1' && (
+        <div>
+          <h2></h2>
+          {/* Add content specific to Tab 1 */}
+        </div>
+      )}
+      {activeTab === 'tab2' && (
+        <div>
+          <h2></h2>
+          {/* Add content specific to Tab 2 */}
+        </div>
+      )}
     </div>
     </>
   );
