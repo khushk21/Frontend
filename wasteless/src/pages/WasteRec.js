@@ -35,14 +35,14 @@ const Tabs = () => {
   useEffect(() => {
     // Fetch or set Tab 1 content when Tab 1 is selected
     if (activeTab === 'tab1') {
-      // Example: Set some sample data for Tab 1 content
+      // Set some sample data for Tab 1 content
       setTab1Content([
         { id: 1, name: 'Item 1', price: '$10' },
         { id: 2, name: 'Item 2', price: '$15' },
         { id: 3, name: 'Item 3', price: '$20' },
       ]);
     }
-  });
+  }, []);
 
   return (
     <div className="tabs">
