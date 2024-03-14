@@ -1,0 +1,51 @@
+.wasterec {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #8bc34a; /* Background color for the page */
+}
+
+.wasterec-header {
+    text-align: center; /* Center-align the content */
+    position: relative; /* Fix the header position */
+    top: 0; /* Position at the top of the viewport */
+    width: 100%; /* Full width */
+    color: #333; /* Text color */
+    padding: 20px 0; /* Padding for the header content */
+    background-color: #4e890c;
+  }
+
+  .wasterec-search {
+    position: fixed;
+    text-align: left; /* Center-align the content */
+    top: 110px;
+    left: 20px;
+    color: #333; /* Text color */
+    padding: 20px 0; /* Padding for the header content */
+  }
+
+  .tabs {
+    position: fixed; /* Enable positioning context */
+    top: 200px; /* Position the table 100px from the top of the webpage */
+    width: 100%; /* Ensure the tabs take up the full width of the container */
+    background-color: #4e890c;
+    text-align: center;
+  }
+  
+  .tabs table {
+    width: 100%; /* Ensure the table takes up the full width of the container */
+    border-collapse: collapse; /* Collapse borders between cells */
+  }
+  
+  .tabs td {
+    border: 1px solid #ddd; /* Add border to cells */
+    padding: 8px; /* Add padding to cells */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
+  .tabs td.active {
+    background-color: #f2f2f2; /* Highlight active tab */
+  }
+  

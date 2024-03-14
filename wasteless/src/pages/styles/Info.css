@@ -1,0 +1,12 @@
+.info {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    text-align: center; /* Center-align the content */
+    background-color: #8bc34a; /* Background color for the header */
+    color: #333; /* Text color */
+  }
+
+  
