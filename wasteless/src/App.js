@@ -4,7 +4,7 @@ import { Feed } from "./pages";
 import Registration from "./pages/Registration";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
-import Catelog from "./pages/Catelog";
+import Catalogue from "./pages/Catalogue";
 import AddNewWaste from "./pages/AddNewWaste";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/users/feed" element={<Feed />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/catelog" element={<Catelog />} />
+        <Route path="/Catalogue" element={<Catalogue />} />
         <Route path="/add/new" element={<AddNewWaste />} />
 
       </Routes>
