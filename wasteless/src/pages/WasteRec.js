@@ -42,7 +42,7 @@ const Tabs = () => {
         { id: 3, name: 'Item 3', price: '$20' },
       ]);
     }
-  }, [activeTab]);
+  });
 
   return (
     <div className="tabs">
@@ -85,20 +85,6 @@ const Tabs = () => {
       <div className="wasterec-search">
         <SearchBar />
       </div>
-
-      {/* Add content for each tab based on the activeTab state */}
-      {activeTab === 'tab1' && (
-        <div>
-          <h2></h2>
-          {/* Add content specific to Tab 1 */}
-        </div>
-      )}
-      {activeTab === 'tab2' && (
-        <div>
-          <h2></h2>
-          {/* Add content specific to Tab 2 */}
-        </div>
-      )}
     </div>
     </>
   );
