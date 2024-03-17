@@ -1,22 +1,24 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Feed } from "./pages";
 import Registration from "./pages/Registration";
 import Login from "./pages/Login";
-import Home from "./pages/Home";
+import Welcome from "./pages/Welcome";
 import Catalogue from "./pages/Catalogue";
 import AddNewWaste from "./pages/AddNewWaste";
 import Information from "./pages/Information";
 import WasteRec from "./pages/WasteRec";
+import Home from "./pages/Home";
+import WastePOIList from "./pages/WastePOIList";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Welcome />} />
+        <Route path="/nearestPOIs" element={<WastePOIList />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/registration" element={<Registration />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/users/feed" element={<Feed />} />
         <Route path="/Catalogue" element={<Catalogue />} />
         <Route path="/addwaste" element={<AddNewWaste />} />
         <Route path="/info" element={<Information />} />

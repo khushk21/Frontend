@@ -14,11 +14,13 @@ import InputAdornment from "@mui/material/InputAdornment";
 import FormHelperText from "@mui/material/FormHelperText";
 import AppBarComponent from "../components/AppBar";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [obscureText, setObscureText] = useState(true);
+  const navigate = useNavigate();
 
   const validatePassword = (password) => {
     return password.length >= 6;
@@ -46,7 +48,7 @@ const Login = () => {
         user
       );
       if (response.data.error === null) {
-        alert("Welcome to WasteLess " + response.data.user.name);
+        navigate(`/home?username=${username}`);
       } else {
         alert(response.data.error.message);
       }
