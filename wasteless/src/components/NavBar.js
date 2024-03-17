@@ -7,7 +7,7 @@ import Badge from "@mui/material/Badge";
 import Shield from "@mui/icons-material/Shield";
 import "./styles/NavBar.css";
 
-const Navbar = ({ points }) => {
+const Navbar = ({ points, username }) => {
   return (
     <div>
       <AppBar position="fixed" style={{ backgroundColor: "#006400" }}>
@@ -26,7 +26,7 @@ const Navbar = ({ points }) => {
 
           <Box flexGrow={1} />
           <NavLink
-            to="/"
+            to={`/home?username=${username}`}
             exact
             className="navLink"
             style={{
