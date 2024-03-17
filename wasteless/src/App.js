@@ -18,7 +18,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/users/feed" element={<Feed />} />
         <Route path="/Catalogue" element={<Catalogue />} />
-        <Route path="/add/new" element={<AddNewWaste />} />
+        <Route path="/addwaste" element={<AddNewWaste />} />
         <Route path="/info" element={<Information />} />
         <Route path="/wasterec" element={<WasteRec />} />
       </Routes>

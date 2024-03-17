@@ -1,0 +1,4 @@
+.navLink.active {
+  font-weight: bold;
+  color: black; /* Or any other color you prefer */
+}
