@@ -1,64 +1,46 @@
 import React from "react";
-import { Typography, Button } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
 import "../App.css";
+import AppBarComponent from "../components/AppBar";
 
-//To add routes to other pages
-//For the time being leave it as it is, until other routes created
 const Home = () => {
+  const handleSignUp = () => {
+    window.location.href = "/registration";
+  };
+  const handleSignIn = () => {
+    window.location.href = "/login";
+  };
+
   return (
     <div
       className="home-container"
-        style={{
+      style={{
         backgroundColor: "#8bc34a",
         minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
+        padding: "0 20px",
       }}
     >
-      <Typography 
-        variant="h3" 
-        align="center"
-        paddingTop="5vh"
-        backgroundColor="#8bc34a"
+      <AppBarComponent />
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={handleSignUp}
+        style={{ marginBottom: "20px", maxWidth: "300px", width: "100%" }}
       >
-        User Names
-      </Typography>
-      <div
-        style={{
-          padding: "10vh",
-          minHeight: "20vh",
-          display: "flex",
-          justifyContent: "center"
-        }}
+        Sign Up
+      </Button>
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={handleSignIn}
+        style={{ maxWidth: "300px", width: "100%" }}
       >
-        <div
-          style={{
-            width: "35vh",
-            align: "center"
-          }}
-        >
-            <Button sx={{ margin: "2% 3%" }} variant="outlined" style={{backgroundColor: "lightblue", fontWeight: "Bold", width: "95%"}}>
-              <Link to="/users/feed">View Users</Link>
-            </Button>
-
-            <Button sx={{ margin: "2% 3%" }} variant="outlined" style={{backgroundColor: "lightblue", fontWeight: "Bold", width: "95%"}}>
-              <Link to="/catelog">Catelog</Link>         
-            </Button>
-
-            <Button sx={{ margin: "2% 3%" }} variant="outlined" style={{backgroundColor: "lightblue", fontWeight: "Bold", width: "95%"}}>
-              <Link to="/addWaste">Add Waste</Link>
-            </Button>
-
-            <Button sx={{ margin: "2% 3%" }} variant="outlined" style={{backgroundColor: "lightblue", fontWeight: "Bold", width: "95%"}}>
-              <Link to="/favourites">Favourites</Link>
-            </Button>
-
-            <Button sx={{ margin: "2% 3%" }} variant="outlined" style={{backgroundColor: "lightblue", fontWeight: "Bold", width: "95%"}}>
-              <Link to="/profile">Profile</Link>
-            </Button>
-        </div>
-      </div>
+        Login
+      </Button>
     </div>
   );
 };

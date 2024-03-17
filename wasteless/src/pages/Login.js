@@ -12,6 +12,7 @@ import InputLabel from "@mui/material/InputLabel";
 import Input from "@mui/material/Input";
 import InputAdornment from "@mui/material/InputAdornment";
 import FormHelperText from "@mui/material/FormHelperText";
+import AppBarComponent from "../components/AppBar";
 import axios from "axios";
 
 const Login = () => {
@@ -80,6 +81,7 @@ const Login = () => {
         justifyContent: "center",
       }}
     >
+      <AppBarComponent />
       <Card style={{ maxWidth: 400 }}>
         <CardContent>
           <Typography

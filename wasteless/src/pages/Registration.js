@@ -14,6 +14,7 @@ import Input from "@mui/material/Input";
 import InputAdornment from "@mui/material/InputAdornment";
 import FormHelperText from "@mui/material/FormHelperText";
 import axios from "axios";
+import AppBarComponent from "../components/AppBar";
 
 const Registration = () => {
   const navigate = useNavigate();
@@ -102,6 +103,8 @@ const Registration = () => {
         justifyContent: "center",
       }}
     >
+      <AppBarComponent />
+
       <Card style={{ maxWidth: 400 }}>
         <CardContent>
           <Typography
