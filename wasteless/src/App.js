@@ -9,6 +9,8 @@ import Information from "./pages/Information";
 import WasteRec from "./pages/WasteRec";
 import Home from "./pages/Home";
 import WastePOIList from "./pages/WastePOIList";
+import Profile from "./pages/Profile";
+
 
 function App() {
   return (
@@ -19,10 +21,11 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/registration" element={<Registration />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/Catalogue" element={<Catalogue />} />
+        <Route path="/catalogue" element={<Catalogue />} />
         <Route path="/addwaste" element={<AddNewWaste />} />
         <Route path="/info" element={<Information />} />
         <Route path="/wasterec" element={<WasteRec />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </Router>
   );

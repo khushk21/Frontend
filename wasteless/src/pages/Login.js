@@ -31,7 +31,9 @@ const Login = () => {
   };
 
   const handleSignUp = async () => {
-    // Validation logic here...
+    // Validation logic here..
+     return navigate(`/home?username=test`); //Added to bypass login, delete on testing/project completion
+    
     if (!validateForm()) {
       alert("Please fill in all required fields correctly");
       return;
@@ -136,7 +138,7 @@ const Login = () => {
             onClick={handleSignUp}
             fullWidth
             style={{ marginTop: "20px" }}
-            disabled={!validateForm()}
+            // disabled={!validateForm()} //Commented to bypass login, delete on testing/project completion
           >
             Login
           </Button>
