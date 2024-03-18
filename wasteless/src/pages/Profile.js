@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 import Navbar from "../components/NavBar";
-import Box from "@mui/material/Box";
 import './styles/Profile.css';
 
 const Profile = () => {
