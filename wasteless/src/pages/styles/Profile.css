@@ -35,6 +35,14 @@
 
 .waste-text-container {
     text-align: left;
+    width: 250px;
+    padding: 0 50px 0 50px;
+}
+
+.total-waste-text {
+    color: blueviolet;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .info-text {
