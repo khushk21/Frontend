@@ -13,7 +13,7 @@ import Input from "@mui/material/Input";
 import InputAdornment from "@mui/material/InputAdornment";
 import FormHelperText from "@mui/material/FormHelperText";
 import AppBarComponent from "../components/AppBar";
-import axios from "axios";
+// import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
@@ -34,29 +34,30 @@ const Login = () => {
     // Validation logic here..
      return navigate(`/home?username=test`); //Added to bypass login, delete on testing/project completion
     
-    if (!validateForm()) {
-      alert("Please fill in all required fields correctly");
-      return;
-    }
+    // if (!validateForm()) {
+    //   alert("Please fill in all required fields correctly");
+    //   return;
+    // }
 
-    const user = {
-      userName: username,
-      password: password,
-    };
+    //Commented to bypass login, delete on testing/project completion
+    // const user = {
+    //   userName: username,
+    //   password: password,
+    // };
 
-    try {
-      const response = await axios.post(
-        "http://localhost:8080/userLogin",
-        user
-      );
-      if (response.data.error === null) {
-        navigate(`/home?username=${username}`);
-      } else {
-        alert(response.data.error.message);
-      }
-    } catch (error) {
-      alert("Unable to Login");
-    }
+    // try {
+    //   const response = await axios.post(
+    //     "http://localhost:8080/userLogin",
+    //     user
+    //   );
+    //   if (response.data.error === null) {
+    //     navigate(`/home?username=${username}`);
+    //   } else {
+    //     alert(response.data.error.message);
+    //   }
+    // } catch (error) {
+    //   alert("Unable to Login");
+    // }
 
     // Simulating API call
     // const usernameEmailExist = await validateUsernameEmail(username, email);
