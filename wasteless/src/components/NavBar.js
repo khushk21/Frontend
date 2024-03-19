@@ -51,7 +51,7 @@ const Navbar = ({ points, username }) => {
             Catalogue
           </NavLink>
           <NavLink
-            to="/addwaste"
+            to={`/addwaste?username=${username}`}
             className="navLink"
             style={{
               color: "inherit",
