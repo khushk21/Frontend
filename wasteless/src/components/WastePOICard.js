@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
@@ -26,12 +26,24 @@ const StyledCard = styled(Card)({
 });
 
 const WastePOICard = ({ poi, user }) => {
+  const [wastePOI, setWastePOI] = useState(null);
   const navigate = useNavigate();
-  const handleCardClick = (poi, user) => {
-    navigate("/wastePOIdetails", { state: { poi: poi, user: user } });
+  const handleCardClick = (poi) => {
+    // setWastePOI(poi);
+    console.log("poi test", poi);
+    // navigate("/wastePOIdetails", {
+    //   state: { poi: poi, user: user },
+    // });
+    navigate(`/wastePOIdetails?username=${user.userName}&poi=${poi.id}`);
   };
   return (
-    <StyledCard onClick={() => handleCardClick(poi, user)}>
+    <StyledCard
+      onClick={() => {
+        setWastePOI(poi);
+        console.log("poi test", wastePOI, poi);
+        handleCardClick(poi);
+      }}
+    >
       <IconButton
         color="primary"
         style={{ position: "absolute", right: 0, top: 0 }}
