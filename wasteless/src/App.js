@@ -10,7 +10,8 @@ import WasteRec from "./pages/WasteRec";
 import Home from "./pages/Home";
 import WastePOIList from "./pages/WastePOIList";
 import Profile from "./pages/Profile";
-
+import WastePOIDetails from "./pages/WastePOIDetails";
+import CarParkList from "./pages/CarParkList";
 
 function App() {
   return (
@@ -26,6 +27,8 @@ function App() {
         <Route path="/info" element={<Information />} />
         <Route path="/wasterec" element={<WasteRec />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/wastePOIdetails" element={<WastePOIDetails />} />
+        <Route path="/nearestCarParks" element={<CarParkList />} />
       </Routes>
     </Router>
   );
