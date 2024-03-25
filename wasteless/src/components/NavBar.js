@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Box from "@mui/material/Box";
-import Badge from "@mui/material/Badge";
 import Shield from "@mui/icons-material/Shield";
 import "./styles/NavBar.css";
+import Typography from "@mui/material/Typography";
 
 const Navbar = ({ points, username }) => {
   return (
@@ -39,7 +39,7 @@ const Navbar = ({ points, username }) => {
             Home
           </NavLink>
           <NavLink
-            to="/Catalogue"
+            to={`/catalogue?username=${username}`}
             className="navLink"
             style={{
               color: "inherit",
@@ -75,7 +75,7 @@ const Navbar = ({ points, username }) => {
             Favourite
           </NavLink>
           <NavLink
-            to="/profile"
+            to={`/profile?username=${username}`}
             className="navLink"
             style={{
               color: "inherit",
@@ -87,9 +87,18 @@ const Navbar = ({ points, username }) => {
             Profile
           </NavLink>
 
-          <Badge badgeContent={points} color="secondary">
-            <Shield />
-          </Badge>
+          <Typography
+            variant="h6"
+            style={{
+              color: "white",
+              marginRight: "10px",
+              fontWeight: "bold",
+              paddingTop: "3px",
+            }}
+          >
+            {points}
+          </Typography>
+          <Shield style={{ color: "white" }} />
         </Toolbar>
       </AppBar>
     </div>
