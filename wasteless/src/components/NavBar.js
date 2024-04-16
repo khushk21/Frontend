@@ -86,6 +86,18 @@ const Navbar = ({ points, username }) => {
           >
             Profile
           </NavLink>
+          <NavLink
+            to={`/info`}
+            className="navLink"
+            style={{
+              color: "inherit",
+              textDecoration: "none",
+              marginRight: "20px",
+              fontSize: "20px",
+            }}
+          >
+            Information
+          </NavLink>
 
           <Typography
             variant="h6"
