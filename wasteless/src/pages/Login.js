@@ -32,7 +32,7 @@ const Login = () => {
 
   const handleSignUp = async () => {
     // Validation logic here..
-    //  return navigate(`/home?username=test`); //Added to bypass login, delete on testing/project completion
+    // return navigate(`/home?username=test`); //Added to bypass login, delete on testing/project completion
     
     if (!validateForm()) {
       alert("Please fill in all required fields correctly");
