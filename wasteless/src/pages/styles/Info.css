@@ -1,12 +1,43 @@
 .info {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    text-align: center; /* Center-align the content */
-    background-color: #8bc34a; /* Background color for the header */
-    color: #333; /* Text color */
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  text-align: center; /* Center-align the content */
+  background-color: #8bc34a; /* Background color for the header */
+  color: #333; /* Text color */
+  overflow-y: auto;
+}
 
-  
+.info div{
+  padding-bottom: 100px;
+}
+
+.info p {
+  text-align: justify;
+  text-justify: inter-word;
+  padding-left: 100px; /* Padding for paragraphs */
+  padding-right: 100px; /* Padding for paragraphs */
+}
+
+.info h2 {
+  text-align: left;
+  padding-left: 100px; /* Padding for paragraphs */
+  padding-right: 100px; /* Padding for paragraphs */
+}
+
+.info h3 {
+  text-align: left;
+  padding-left: 100px; /* Padding for paragraphs */
+  padding-right: 100px; /* Padding for paragraphs */
+}
+
+.info table{
+  padding-left: 100px; /* Padding for paragraphs */
+  padding-bottom: 100px;
+}
+
+.info a{
+  color: blue; /* Text color */
+}
