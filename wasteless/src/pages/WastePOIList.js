@@ -27,9 +27,9 @@ const WastePOIList = () => {
       />
       <h1 style={{ textAlign: "center" }}>Nearest {category} WastePOIs</h1>
       <Box width="90%" m={2}>
-        <Grid container spacing={3} justifyContent="center">
+        <Grid container spacing={3} justifyContent="center" data-testid="wastePOIs-testid">
           {wastePOIs.map((poi, index) => (
-            <WastePOICard key={index} poi={poi} user={user} />
+            <WastePOICard data-testid="wastepoicard-testid" key={index} poi={poi} user={user} />
           ))}
         </Grid>
       </Box>

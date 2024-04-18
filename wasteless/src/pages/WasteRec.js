@@ -14,6 +14,7 @@ export default function WasteRec() {
   
   const SearchBar = () => {
     const handleInputChange = (event) => {
+      
       // Handle input change logic here
     };
 
@@ -21,6 +22,7 @@ export default function WasteRec() {
       <form className="search-bar-container">
         <input 
           type="text" 
+          data-testid="search-testid"
           placeholder="Search..." 
           onChange={handleInputChange} 
         />
@@ -46,7 +48,7 @@ const Tabs = () => {
 
   return (
     <div className="tabs">
-      <table>
+      <table data-testid="tab-testid">
         <thead>
           <tr>
             <th onClick={() => handleTabChange('tab1')} className={activeTab === 'tab1' ? 'active' : ''}>Tab 1</th>
