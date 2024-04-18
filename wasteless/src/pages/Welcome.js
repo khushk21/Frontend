@@ -6,13 +6,9 @@ import AppBarComponent from "../components/AppBar";
 const Home = () => {
   const handleSignUp = () => {
     window.location.href = "/registration";
-    console.log("Redirected to registration")
-    console.log("window.location.href: " + window.location.href)
   };
   const handleSignIn = () => {
     window.location.href = "/login";
-    console.log("Redirectd to Login")
-    console.log("window.location.href: " + window.location.href)
   };
 
   return (
