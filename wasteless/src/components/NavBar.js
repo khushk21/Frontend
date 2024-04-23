@@ -62,7 +62,7 @@ const Navbar = ({ points, username }) => {
           >
             Add Waste
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to="/favourite"
             className="navLink"
             style={{
@@ -73,7 +73,7 @@ const Navbar = ({ points, username }) => {
             }}
           >
             Favourite
-          </NavLink>
+          </NavLink> */}
           <NavLink
             to={`/profile?username=${username}`}
             className="navLink"
