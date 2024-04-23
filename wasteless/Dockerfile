@@ -4,14 +4,14 @@ FROM node:16.17.1 AS build
 # Set the working directory to /wasteless
 WORKDIR /wasteless
 
-# Copy the package.json and package-lock.json files into the container
-COPY package*.json ./
+# Copy the package.json and package-lock.json files into the container at /wasteless
+COPY wasteless/package*.json ./
 
 # Install dependencies
 RUN npm install
 
-# Copy the rest of the application code into the container
-COPY . .
+# Copy the rest of the application code into the container at /wasteless
+COPY wasteless/ ./
 
 # Run the build process
 RUN npm run build
