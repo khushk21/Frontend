@@ -83,7 +83,9 @@ jobs:
       #     npm test
 
       - name: Build Wasteless Web Application
-        run: npm run build
+        run: |
+          cd wasteless
+          npm run build
 
       - name: Build and Push Docker Image
         uses: mr-smithers-excellent/docker-build-push@v5
